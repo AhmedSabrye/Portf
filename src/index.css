@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #ff5f2e;
+  --color-secondary: #e54a1f;
+  --color-tertiary: #2b3a67;
+  --color-light: #ff8a2e;
+  --color-semiWhite: #F5F5F5;
+}
+
+.chevron {
+  animation: goAnimation 0.5s ease-in-out infinite alternate;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+.otherFont {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+.otherFont2 {
+  font-family: "Lobster", sans-serif;
+  font-weight: 400;
+}
+@keyframes goAnimation {
+  0% {
+    transform: translateX(8px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+.asd {
+  color: #236ff3;
+}
+@theme {
+  @keyframes shine {
+    0% {
+      background-position: 100%;
+    }
+    100% {
+      background-position: -100%;
+    }
+  }
+  --animate-shine: shine 5s linear infinite;
+}
+
+/* // tailwind.config.js
+// module.exports = {
+//   theme: {
+//     extend: {
+//       animation: {
+//         shine: 'shine 5s linear infinite',
+//       },
+//     },
+//   },
+//   plugins: [],
+// }; */
