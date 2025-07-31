@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import avatarReact from "../../assets/notionAvatar React Shirt.webp";
 import avatarSuite from "../../assets/notionAvatar Suite.webp";
-import avatarPullover from "../../assets/notionAvatar Pullover.webp";
+import avatarPullover from "../../assets/notionAvatar pullover.webp";
 import { FiExternalLink, FiLinkedin } from "react-icons/fi";
 import { FaBriefcase, FaGithubAlt } from "react-icons/fa";
 import { MdOutlineAlternateEmail } from "react-icons/md";
