@@ -8,13 +8,13 @@ import Footer from "../components/sections/Footer";
 
 export default function HomePage() {
   return (
-    <>
+    <div className="h-screen overflow-y-scroll snap-mandatory snap-y scroll-smooth">
       <Navbar />
       <PortfolioHeroV2 />
       <ProjectsV2 />
       <BioSectionV2 />
       <SkillsSectionV2 />
       <Footer />
-    </>
+    </div>
   );
 }

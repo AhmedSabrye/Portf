@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { projects } from "../constants";
+import { projects } from "../utils/constants";
 import {
   FiExternalLink,
   FiGithub,
@@ -315,6 +315,7 @@ const ProjectsPage = () => {
 
       {/* Modal */}
       <ProjectModal
+        key={selectedProject?.id}
         project={selectedProject}
         isOpen={isModalOpen}
         onClose={closeModal}
