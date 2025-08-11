@@ -11,10 +11,9 @@ const BioSectionV2 = () => {
   return (
     <section
       id="bio"
-      className="min-h-screen py-20 px-4 snap-start text-tertiary flex items-center justify-center"
+      className="min-h-screen py-50 px-4 snap-start text-tertiary flex items-center justify-center"
     >
       <div className="max-w-4xl md:min-w-3xl mx-auto">
-        {/* Header */}
         <div className="text-center mb-12">
           <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden mx-auto mb-6 shadow-sm">
             <AnimatePresence mode="wait">
@@ -78,7 +77,6 @@ const BioSectionV2 = () => {
           </div>
         </div>
 
-        {/* Tab Content */}
         <div className="bg-white rounded-lg p-8 shadow-sm min-h-96 sm:min-h-64">
           <AnimatePresence mode="wait">
             <motion.div
@@ -191,7 +189,6 @@ const BioSectionV2 = () => {
           </AnimatePresence>
         </div>
 
-        {/* Social Links */}
         <div className="flex flex-wrap justify-center gap-4 mt-8">
           {socialLinks.map((link) => (
             <a

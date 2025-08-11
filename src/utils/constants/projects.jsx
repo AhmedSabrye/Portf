@@ -18,6 +18,17 @@ import attendoChangingTemplate from "@/assets/Attendo/Changing Template.mp4";
 import attendoCreateTemplate from "@/assets/Attendo/Create Template.mp4";
 import attendoCreateGroup from "@/assets/Attendo/Create Group.mp4";
 
+// freshbag folder imports
+import freshbagAllOrders from "@/assets/freshbag/allOrders.mp4";
+import freshbagBrandsPage from "@/assets/freshbag/brands.mp4";
+import freshbagCart from "@/assets/freshbag/cart.mp4";
+import freshbagForms from "@/assets/freshbag/forms.mp4";
+import freshbagHome from "@/assets/freshbag/home.mp4";
+import freshbagLightMode from "@/assets/freshbag/lightMode.mp4";
+import freshbagLoginIndication from "@/assets/freshbag/login!.mp4";
+import freshbagProductDetails from "@/assets/freshbag/productDetails.mp4";
+import freshbagProducts from "@/assets/freshbag/products.mp4";
+
 // import me2Img from "@/assets/Me2.png";
 import organizerImg from "@/assets/notionAvatar Oragnizer.png";
 export const projects = [
@@ -53,7 +64,17 @@ export const projects = [
       "A full-featured online store with real-time inventory updates and modern UI components.",
     tech: ["React", "Zustand", "Tailwindcss", "Framer Motion"],
     image: img1,
-    images: [img1, img0, img2, img3],
+    images: [
+      freshbagHome,
+      freshbagAllOrders,
+      freshbagCart,
+      freshbagProducts,
+      freshbagBrandsPage,
+      freshbagProductDetails,
+      freshbagLightMode,
+      freshbagForms,
+      freshbagLoginIndication,
+    ],
     link: "https://e-commerce-route-lovat.vercel.app/",
     category: "Frontend",
     year: "2025",
