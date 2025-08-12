@@ -54,7 +54,7 @@ export default function Navbar() {
         </li>
       </ul>
       <a
-        href="https://drive.google.com/file/d/1oIV3TafB7PvltBrofKdA1FFy-23s_3gf/view?usp=sharing"
+        href="https://drive.google.com/file/d/1nP-ehoSLB-pbP369schYczkmh-HTtqDR/view?usp=sharing"
         target="_blank"
         className="text-xs sm:text-sm font-semibold bg-gray-900 text-white px-4 py-2 rounded-full shadow-md hover:shadow-lg transition"
       >
