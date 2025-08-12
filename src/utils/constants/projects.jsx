@@ -29,6 +29,13 @@ import freshbagLoginIndication from "@/assets/freshbag/login!.mp4";
 import freshbagProductDetails from "@/assets/freshbag/productDetails.mp4";
 import freshbagProducts from "@/assets/freshbag/products.mp4";
 
+// Trivia folder imports
+import triviaHome from "@/assets/Trivia/home.png";
+import triviaQuestion from "@/assets/Trivia/Question.png";
+import triviaResults from "@/assets/Trivia/results.png";
+import triviaCorrect from "@/assets/Trivia/correct.png";
+import triviaIncorrect from "@/assets/Trivia/incorrect.png";
+
 // import me2Img from "@/assets/Me2.png";
 import organizerImg from "@/assets/notionAvatar Oragnizer.png";
 export const projects = [
@@ -88,8 +95,14 @@ export const projects = [
       "Interactive quiz application with TypeScript and real-time scoring system.",
     tech: ["React", "Typescript", "Zustand", "React Router"],
     image: img2,
-    images: [img2, img3, img0, ahmadImg],
-    link: "https://quiz-app-react-chi-seven.vercel.app/",
+    images: [
+      triviaHome,
+      triviaQuestion,
+      triviaCorrect,
+      triviaIncorrect,
+      triviaResults,
+    ],
+    link: "https://trivia-aiq.pages.dev/quiz",
     category: "Frontend",
     year: "2025",
     github: "https://github.com/AhmedSabrye/Trivia",
@@ -102,7 +115,7 @@ export const projects = [
       "Real-time hourly and daily weather forecasts with modern UI components.",
     tech: ["React", "Typescript", "Shadcn", "Tailwindcss"],
     image: img3,
-    images: [img3, img1, organizerImg],
+    images: [img3],
     link: "https://weatherio-8a0.pages.dev",
     category: "Frontend",
     year: "2025",
@@ -115,7 +128,7 @@ export const projects = [
     description:
       "Pixel-perfect landing page converted from Figma design to clean code.",
     image: imgF1,
-    images: [imgF1, imgF2, imgF3, img0],
+    images: [imgF1],
     link: "https://manage-landing-page-frontend-mentor-iota.vercel.app/",
     category: "Design to Code",
     year: "2025",
@@ -129,7 +142,7 @@ export const projects = [
     description:
       "Product showcase page with interactive features and responsive design.",
     image: imgF2,
-    images: [imgF2, imgF1, imgF3, img1],
+    images: [imgF2],
     link: "https://e-commerce-product-page-frontend-mentor-peach.vercel.app/",
     category: "Design to Code",
     year: "2025",
@@ -142,7 +155,7 @@ export const projects = [
     shortTitle: "Age Calculator",
     description: "Clean and intuitive age calculator with form validation.",
     image: imgF3,
-    images: [imgF3, imgF2, imgF1, img2],
+    images: [imgF3],
     link: "https://age-calculator-frontend-mentor-mocha.vercel.app/",
     category: "Design to Code",
     year: "2025",
