@@ -1,5 +1,5 @@
 import avatarSuite from "../../assets/notionAvatar Suite.webp";
-import avatarReact from "../../assets/notionAvatar React Shirt.webp";
+import avatarReact from "../../assets/notionAvatar Oragnizer Squooshed.jpg";
 import avatarPullover from "../../assets/notionAvatar pullover.webp";
 import { FaBrain, FaBriefcase } from "react-icons/fa";
 import { CiHeart } from "react-icons/ci";

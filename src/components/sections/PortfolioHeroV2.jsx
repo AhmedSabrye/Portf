@@ -1,5 +1,4 @@
-import React from "react";
-import avatar from "@/assets/Ahmed Sabry.jpg";
+import avatar from "@/assets/Ahmed Sabry squooshed.jpg";
 import { socialLinks } from "@/utils/constants";
 import { motion } from "framer-motion";
 

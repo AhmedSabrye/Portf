@@ -5,8 +5,6 @@ import img3 from "@/assets/weatherio.png";
 import imgF1 from "@/assets/figmaDesigns/manage.jpg";
 import imgF2 from "@/assets/figmaDesigns/asdf.jpg";
 import imgF3 from "@/assets/figmaDesigns/Age.jpg";
-import ahmadImg from "@/assets/Ahmed Sabry.jpg";
-
 // Attendo folder imports
 import attendoHomePage from "@/assets/Attendo/Home Page.png";
 import attendoGroupSettings from "@/assets/Attendo/Group Settings.png";
@@ -36,8 +34,7 @@ import triviaResults from "@/assets/Trivia/results.png";
 import triviaCorrect from "@/assets/Trivia/correct.png";
 import triviaIncorrect from "@/assets/Trivia/incorrect.png";
 
-// import me2Img from "@/assets/Me2.png";
-import organizerImg from "@/assets/notionAvatar Oragnizer.png";
+
 export const projects = [
   {
     id: 1,
