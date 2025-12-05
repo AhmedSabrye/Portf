@@ -26,7 +26,7 @@ const ProjectsV2 = () => {
     <>
       <section
         id="projects"
-        className="flex items-center justify-center px-4 py-40 snap-start min-h-screen"
+        className="flex items-center justify-center px-4 py-40 min-h-screen"
       >
         <div className="w-full max-w-7xl bg-white rounded-[3rem] shadow-2xl overflow-hidden">
           <div className="text-center px-6 lg:px-10 pt-8 pb-6">

@@ -11,7 +11,7 @@ const BioSectionV2 = () => {
   return (
     <section
       id="bio"
-      className="min-h-screen py-50 px-4 snap-start text-tertiary flex items-center justify-center"
+      className="min-h-screen py-50 px-4 text-tertiary flex items-center justify-center"
     >
       <div className="max-w-4xl md:min-w-3xl mx-auto">
         <div className="text-center mb-12">

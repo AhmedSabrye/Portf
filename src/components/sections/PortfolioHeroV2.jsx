@@ -6,7 +6,7 @@ const PortfolioHeroV2 = () => {
   return (
     <section
       id="home"
-      className=" min-h-screen bg-gradient-to-b px-4 py-10 snap-start flex items-center justify-center"
+      className=" min-h-screen bg-gradient-to-b px-4 py-10 flex items-center justify-center"
     >
       <div className="relative z-10 flex flex-col items-center text-center px-6 lg:px-10 pb-16">
         <div className="w-28 h-28 sm:w-32 sm:h-32 md:w-36 md:h-36 rounded-full overflow-hidden shadow-lg relative ring-4 ring-primary/50 ring-offset-4 ring-offset-white">

@@ -50,7 +50,7 @@ const SkillsSectionV2 = () => {
   return (
     <section
       id="skills"
-      className="min-h-screen pt-20 pb-10 sm:px-4 snap-start flex items-center justify-center"
+      className="min-h-screen pt-20 pb-10 sm:px-4 flex items-center justify-center"
     >
       <div className="max-w-7xl md:min-w-3xl mx-auto">
         <div className="text-center mb-16">
