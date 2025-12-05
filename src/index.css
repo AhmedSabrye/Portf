@@ -14,6 +14,12 @@
 body {
   font-family: "Poppins", sans-serif;
 }
+
+/* Smooth scrolling for the entire document */
+html {
+  scroll-behavior: smooth;
+}
+
 .otherFont {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
