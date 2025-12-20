@@ -11,7 +11,7 @@ const BioSectionV2 = () => {
   return (
     <section
       id="bio"
-      className="min-h-screen py-50 px-4 text-tertiary flex items-center justify-center"
+      className="py-10 px-4 text-tertiary flex items-center justify-center"
     >
       <motion.div
         initial={{ opacity: 0, x: -50 }}
