@@ -34,8 +34,25 @@ import triviaResults from "@/assets/Trivia/results.png";
 import triviaCorrect from "@/assets/Trivia/correct.png";
 import triviaIncorrect from "@/assets/Trivia/incorrect.png";
 
+// LaQta folder imports
+import laqta1 from "@/assets/laqta/1.jpg";
+import laqta2 from "@/assets/laqta/2.jpg";
+import laqta3 from "@/assets/laqta/3.jpg";
 
 export const projects = [
+  {
+    id: 8,
+    title: "LaQta",
+    shortTitle: "LaQta",
+    description:
+      "A breakpoint-aware screenshot studio Chrome extension for capturing pixel-perfect screenshots across responsive breakpoints.",
+    tech: ["React", "Tailwindcss", "Chrome API", "Framer Motion"],
+    image: laqta1,
+    images: [laqta1, laqta2, laqta3],
+    link: "https://laqta.org/",
+    category: "Chrome Extension",
+    year: "2025",
+  },
   {
     id: 1,
     title: "Attendo",
