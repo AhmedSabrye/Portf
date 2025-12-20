@@ -8,7 +8,7 @@ import Footer from "../components/sections/Footer";
 
 export default function HomePage() {
   return (
-    <div className="h-screen overflow-y-scroll snap-mandatory snap-y scroll-smooth">
+    <div className="scroll-smooth">
       <Navbar />
       <PortfolioHeroV2 />
       <ProjectsV2 />

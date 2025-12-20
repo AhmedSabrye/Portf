@@ -11,9 +11,15 @@ const BioSectionV2 = () => {
   return (
     <section
       id="bio"
-      className="min-h-screen py-50 px-4 snap-start text-tertiary flex items-center justify-center"
+      className="min-h-screen py-50 px-4 text-tertiary flex items-center justify-center"
     >
-      <div className="max-w-4xl md:min-w-3xl mx-auto">
+      <motion.div
+        initial={{ opacity: 0, x: -50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true, amount: 0.33 }}
+        transition={{ duration: 0.8 }}
+        className="max-w-4xl md:min-w-3xl mx-auto"
+      >
         <div className="text-center mb-12">
           <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden mx-auto mb-6 shadow-sm">
             <AnimatePresence mode="wait">
@@ -206,7 +212,7 @@ const BioSectionV2 = () => {
             </a>
           ))}
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

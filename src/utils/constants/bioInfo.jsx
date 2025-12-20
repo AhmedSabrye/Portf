@@ -11,10 +11,10 @@ export const bioInfo = [
     img: avatarSuite,
     icon: <FaBriefcase className="w-5 h-5" />,
     items: [
-      "Frontend developer specializing in React and Next.js",
+      "Frontend Developer at Bevatel",
+      "specialized in React, Next.js and Vue.js",
       "Creating intuitive and high-performance web applications",
-      "Academic Mentor at Route Academy",
-      "Helping students master frontend development",
+      "Academic Mentor at Route Academy Helping students master frontend development",
     ],
   },
   {

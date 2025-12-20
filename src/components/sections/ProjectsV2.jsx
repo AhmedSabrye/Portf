@@ -26,9 +26,15 @@ const ProjectsV2 = () => {
     <>
       <section
         id="projects"
-        className="flex items-center justify-center px-4 py-40 snap-start min-h-screen"
+        className="flex items-center justify-center px-4 py-40 min-h-screen"
       >
-        <div className="w-full max-w-7xl bg-white rounded-[3rem] shadow-2xl overflow-hidden">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.33 }}
+          transition={{ duration: 0.8 }}
+          className="w-full max-w-7xl bg-white rounded-[3rem] shadow-2xl overflow-hidden"
+        >
           <div className="text-center px-6 lg:px-10 pt-8 pb-6">
             <span className=" inline-block text-sm w-fit mx-auto font-medium bg-semiWhite text-primary px-4 py-2 rounded-full shadow-sm mb-4">
               ✨ My Work
@@ -93,7 +99,7 @@ const ProjectsV2 = () => {
               View All Projects
             </Link>
           </div>
-        </div>
+        </motion.div>
       </section>
 
       <ProjectModal
