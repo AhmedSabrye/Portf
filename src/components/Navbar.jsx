@@ -69,16 +69,16 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="z-50 rounded-2xl shadow-lg mb-12 max-w-7xl mx-auto fixed top-8 right-4 left-4 sm:right-8 sm:left-8 lg:right-10 lg:left-10 bg-white/80 dark:bg-slate-800/80 backdrop-blur-md flex items-center justify-between px-6 py-4 border border-white/20 dark:border-slate-600/40">
+      <nav className="z-50 rounded-2xl shadow-lg mb-12 max-w-7xl mx-auto fixed top-8 right-4 left-4 sm:right-8 sm:left-8 lg:right-10 lg:left-10 bg-white/80 dark:bg-slate-800/80 backdrop-blur-md grid grid-cols-3 items-center px-6 py-4 border border-white/20 dark:border-slate-600/40">
         <button
           onClick={() => scrollToSection("home")}
-          className="text-sm font-extrabold uppercase bg-primary cursor-pointer text-white px-5 py-2 rounded-full shadow-lg hover:scale-105 transition-transform"
+          className="text-sm font-extrabold uppercase bg-primary cursor-pointer text-white px-5 py-2 rounded-full shadow-lg hover:scale-105 transition-transform justify-self-start"
         >
           Sabry
         </button>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex gap-8 font-medium text-gray-600 dark:text-slate-300">
+        <ul className="hidden md:flex gap-8 font-medium text-gray-600 dark:text-slate-300 justify-self-center">
           {navLinks.map((link) => (
             <li key={link.id}>
               <button
@@ -92,7 +92,7 @@ export default function Navbar() {
           ))}
         </ul>
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4 justify-self-end">
           <button
             type="button"
             onClick={toggleTheme}
