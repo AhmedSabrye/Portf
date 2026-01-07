@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
 import { FiMoon, FiSun } from "react-icons/fi";
 import { motion, AnimatePresence } from "framer-motion";
@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isDark, setIsDark] = useState(true);
+  const [activeSection, setActiveSection] = useState("home");
 
   useEffect(() => {
     const storedTheme = localStorage.getItem("theme");
@@ -32,14 +33,42 @@ export default function Navbar() {
       });
     }
     setIsOpen(false);
+    setActiveSection(sectionId);
   };
 
-  const navLinks = [
-    { id: "home", label: "Home" },
-    { id: "projects", label: "Projects" },
-    { id: "bio", label: "Bio" },
-    { id: "skills", label: "Skills" },
-  ];
+  const navLinks = useMemo(
+    () => [
+      { id: "home", label: "Home" },
+      { id: "projects", label: "Projects" },
+      { id: "bio", label: "Bio" },
+      { id: "skills", label: "Skills" },
+    ],
+    []
+  );
+
+  useEffect(() => {
+    const sections = navLinks
+      .map((link) => document.getElementById(link.id))
+      .filter(Boolean);
+    if (!sections.length) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.intersectionRatio >= 0.5) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      { rootMargin: "0px 0px -10% 0px", threshold: 0.6 }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [navLinks]);
 
   const menuVariants = {
     closed: {
@@ -83,10 +112,15 @@ export default function Navbar() {
             <li key={link.id}>
               <button
                 onClick={() => scrollToSection(link.id)}
-                className="hover:text-primary transition-colors cursor-pointer relative group"
+                className={`transition-colors cursor-pointer relative group ${activeSection === link.id ? "text-primary" : "hover:text-primary"
+                  }`}
+                aria-current={activeSection === link.id ? "page" : undefined}
               >
                 {link.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full" />
+                <span
+                  className={`absolute -bottom-1 left-0 h-0.5 bg-primary transition-all ${activeSection === link.id ? "w-full" : "w-0 group-hover:w-full"
+                    }`}
+                />
               </button>
             </li>
           ))}
@@ -159,8 +193,14 @@ export default function Navbar() {
                     <button
                       onClick={() => scrollToSection(link.id)}
                       className="text-gray-600 dark:text-slate-300 hover:text-primary transition-colors"
+                      aria-current={activeSection === link.id ? "page" : undefined}
                     >
-                      {link.label}
+                      <span
+                        className={`${activeSection === link.id ? "text-primary" : ""
+                          }`}
+                      >
+                        {link.label}
+                      </span>
                     </button>
                   </motion.li>
                 ))}
