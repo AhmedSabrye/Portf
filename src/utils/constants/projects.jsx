@@ -135,44 +135,45 @@ export const projects = [
     year: "2025",
     github: "https://github.com/AhmedSabrye/weatherio",
   },
-  {
-    id: 5,
-    title: "Manage Landing Page",
-    shortTitle: "manage dashboard",
-    description:
-      "Pixel-perfect landing page converted from Figma design to clean code.",
-    image: imgF1,
-    images: [imgF1],
-    link: "https://manage-landing-page-frontend-mentor-iota.vercel.app/",
-    category: "Design to Code",
-    year: "2025",
-    github:
-      "https://github.com/AhmedSabrye/manage-landing-page-frontend-mentor",
-  },
-  {
-    id: 6,
-    title: "Product Showcase",
-    shortTitle: "E-commerce",
-    description:
-      "Product showcase page with interactive features and responsive design.",
-    image: imgF2,
-    images: [imgF2],
-    link: "https://e-commerce-product-page-frontend-mentor-peach.vercel.app/",
-    category: "Design to Code",
-    year: "2025",
-    github:
-      "https://github.com/AhmedSabrye/E-commerce-product-page-Frontend-Mentor",
-  },
-  {
-    id: 7,
-    title: "Age Calculator Tool",
-    shortTitle: "Age Calculator",
-    description: "Clean and intuitive age calculator with form validation.",
-    image: imgF3,
-    images: [imgF3],
-    link: "https://age-calculator-frontend-mentor-mocha.vercel.app/",
-    category: "Design to Code",
-    year: "2025",
-    github: "https://github.com/AhmedSabrye/age-calculator-frontend-mentor",
-  },
+  // Archived simple projects
+  // {
+  //   id: 5,
+  //   title: "Manage Landing Page",
+  //   shortTitle: "manage dashboard",
+  //   description:
+  //     "Pixel-perfect landing page converted from Figma design to clean code.",
+  //   image: imgF1,
+  //   images: [imgF1],
+  //   link: "https://manage-landing-page-frontend-mentor-iota.vercel.app/",
+  //   category: "Design to Code",
+  //   year: "2025",
+  //   github:
+  //     "https://github.com/AhmedSabrye/manage-landing-page-frontend-mentor",
+  // },
+  // {
+  //   id: 6,
+  //   title: "Product Showcase",
+  //   shortTitle: "E-commerce",
+  //   description:
+  //     "Product showcase page with interactive features and responsive design.",
+  //   image: imgF2,
+  //   images: [imgF2],
+  //   link: "https://e-commerce-product-page-frontend-mentor-peach.vercel.app/",
+  //   category: "Design to Code",
+  //   year: "2025",
+  //   github:
+  //     "https://github.com/AhmedSabrye/E-commerce-product-page-Frontend-Mentor",
+  // },
+  // {
+  //   id: 7,
+  //   title: "Age Calculator Tool",
+  //   shortTitle: "Age Calculator",
+  //   description: "Clean and intuitive age calculator with form validation.",
+  //   image: imgF3,
+  //   images: [imgF3],
+  //   link: "https://age-calculator-frontend-mentor-mocha.vercel.app/",
+  //   category: "Design to Code",
+  //   year: "2025",
+  //   github: "https://github.com/AhmedSabrye/age-calculator-frontend-mentor",
+  // },
 ];
