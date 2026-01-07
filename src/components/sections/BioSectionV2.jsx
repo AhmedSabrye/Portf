@@ -11,7 +11,7 @@ const BioSectionV2 = () => {
   return (
     <section
       id="bio"
-      className="pb-10 pt-30 px-4 text-tertiary flex items-center justify-center"
+      className="pb-10 pt-30 px-4 text-tertiary dark:text-slate-100 flex items-center justify-center"
     >
       <motion.div
         initial={{ opacity: 0, x: -50 }}
@@ -35,24 +35,24 @@ const BioSectionV2 = () => {
               />
             </AnimatePresence>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold mb-3 text-tertiary">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-3 text-tertiary dark:text-slate-100">
             About <span className="text-primary">Me</span>
           </h2>
-          <p className="text-gray-700 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-700 dark:text-slate-300 text-lg max-w-2xl mx-auto">
             Frontend developer and mentor passionate about React, Next.js.
           </p>
         </div>
 
         {/* Tab Navigation */}
         <div className="flex justify-center mb-8">
-          <div className="flex bg-white rounded-lg p-1 shadow-sm">
+          <div className="flex bg-white dark:bg-slate-800 rounded-lg p-1 shadow-sm">
             {bioInfo.map((section) => (
               <button
                 key={section.id}
                 onClick={() => setActiveTab(section.id)}
                 className={`flex items-center gap-2 px-4 py-2 rounded-md font-medium transition-all duration-200 ${activeTab === section.id
                     ? "bg-primary text-white shadow-sm"
-                    : "text-gray-700 hover:text-tertiary hover:bg-gray-50"
+                    : "text-gray-700 dark:text-slate-300 hover:text-tertiary hover:bg-gray-50 dark:hover:bg-slate-800"
                   }`}
               >
                 <span
@@ -82,7 +82,7 @@ const BioSectionV2 = () => {
           </div>
         </div>
 
-        <div className="bg-white rounded-lg p-8 shadow-sm min-h-96 sm:min-h-64">
+        <div className="bg-white dark:bg-slate-800 rounded-lg p-8 shadow-sm min-h-96 sm:min-h-64">
           <AnimatePresence mode="wait">
             <motion.div
               key={activeSection.id}
@@ -115,7 +115,7 @@ const BioSectionV2 = () => {
               <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white">
                 {activeSection?.icon}
               </div>
-              <h3 className="text-2xl font-bold text-tertiary">
+              <h3 className="text-2xl font-bold text-tertiary dark:text-slate-100">
                 {activeSection?.category}
               </h3>
             </motion.div>
@@ -185,7 +185,7 @@ const BioSectionV2 = () => {
                   className="flex items-start gap-3"
                 >
                   <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                  <span className="text-tertiary text-base leading-relaxed">
+                  <span className="text-tertiary dark:text-slate-200 text-base leading-relaxed">
                     {item}
                   </span>
                 </motion.li>
@@ -201,7 +201,7 @@ const BioSectionV2 = () => {
               href={link.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2 bg-white text-gray-700 rounded-lg shadow-sm hover:shadow-md hover:text-primary transition-all duration-200"
+              className="flex items-center gap-2 px-4 py-2 bg-white dark:bg-slate-800 text-gray-700 dark:text-slate-300 rounded-lg shadow-sm hover:shadow-md hover:text-primary transition-all duration-200"
             >
               {link.icon}
               <span className="font-medium">{link.name}</span>

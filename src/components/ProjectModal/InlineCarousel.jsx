@@ -42,10 +42,10 @@ export default function InlineCarousel({
       initial={{ scale: 0.8, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
       exit={{ scale: 0.8, opacity: 0 }}
-      className="bg-white rounded-2xl max-w-7xl w-full max-h-[90vh] overflow-hidden shadow-2xl h-full"
+      className="bg-white dark:bg-slate-800 rounded-2xl max-w-7xl w-full max-h-[90vh] overflow-hidden shadow-2xl h-full"
       onClick={(e) => e.stopPropagation()}
     >
-      <div className="h-72 md:h-96 lg:h-[500px] bg-gray-100 relative overflow-hidden">
+      <div className="h-72 md:h-96 lg:h-[500px] bg-gray-100 dark:bg-slate-700 relative overflow-hidden">
         <div className="embla" ref={emblaRef}>
           <div className="embla__container flex">
             {projectImages.map((media, index) => (
@@ -89,9 +89,9 @@ export default function InlineCarousel({
         <button
           id="fullscreen-button"
           onClick={toggleFullscreen}
-          className="absolute bottom-4 right-4 bg-white/90 backdrop-blur-sm rounded-full p-2 hover:bg-white transition-colors shadow-lg z-10"
+          className="absolute bottom-4 right-4 bg-white/90 dark:bg-slate-700/90 backdrop-blur-sm rounded-full p-2 hover:bg-white dark:hover:bg-slate-600 transition-colors shadow-lg z-10"
         >
-          <FiMaximize className="w-5 h-5 text-gray-900" />
+          <FiMaximize className="w-5 h-5 text-gray-900 dark:text-slate-100" />
         </button>
       </div>
 

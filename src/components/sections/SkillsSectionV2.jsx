@@ -54,7 +54,7 @@ const SkillCard = ({
     onClick={() => handleSkillClick(skill)}
   >
     <motion.div
-      className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 bg-white rounded-2xl p-2.5 sm:p-3 md:p-4 shadow-xl cursor-pointer transition-all duration-300 ease-out select-none"
+      className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 bg-white dark:bg-slate-800 rounded-2xl p-2.5 sm:p-3 md:p-4 shadow-xl cursor-pointer transition-all duration-300 ease-out select-none"
       whileHover={{
         scale: 1.1,
         y: -5,
@@ -147,8 +147,8 @@ const EcosystemPyramid = ({
   return (
     <div className="flex flex-col items-center">
       <h3
-        className={`text-xl sm:text-2xl font-extrabold mb-10 pb-2 border-b-4 tracking-tight`}
-        style={{ borderColor: color, color: "#111827" }}
+        className={`text-xl sm:text-2xl font-extrabold mb-10 pb-2 border-b-4 tracking-tight text-gray-900 dark:text-slate-100`}
+        style={{ borderColor: color }}
       >
         {title}
       </h3>
@@ -197,7 +197,7 @@ const SkillsSectionV2 = () => {
   return (
     <section
       id="skills"
-      className="min-h-screen pt-30 pb-20 px-4 sm:px-6 flex items-center justify-center bg-gray-50/20"
+      className="min-h-screen pt-30 pb-20 px-4 sm:px-6 flex items-center justify-center bg-gray-50/20 dark:bg-slate-900"
     >
       <div className="max-w-[1400px] w-full mx-auto">
         <div className="text-center mb-16 md:mb-20">
@@ -214,7 +214,7 @@ const SkillsSectionV2 = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.33 }}
             transition={{ delay: 0.1 }}
-            className="text-4xl sm:text-5xl md:text-6xl font-black text-gray-900 mb-6 otherFont"
+            className="text-4xl sm:text-5xl md:text-6xl font-black text-gray-900 dark:text-slate-100 mb-6 otherFont"
           >
             The Tech <span className="text-primary">Ecosystems</span>
           </motion.h2>
@@ -223,7 +223,7 @@ const SkillsSectionV2 = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.33 }}
             transition={{ delay: 0.2 }}
-            className="text-gray-500 max-w-2xl mx-auto text-base sm:text-lg"
+            className="text-gray-500 dark:text-slate-300 max-w-2xl mx-auto text-base sm:text-lg"
           >
             Mastering the leading frontend frameworks and their associated
             libraries to build high-performance applications.
@@ -236,7 +236,7 @@ const SkillsSectionV2 = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.33 }}
-            className="text-xl sm:text-2xl font-extrabold mb-10 pb-2 border-b-4 border-gray-900 text-gray-900"
+            className="text-xl sm:text-2xl font-extrabold mb-10 pb-2 border-b-4 border-gray-900 dark:border-slate-600 text-gray-900 dark:text-slate-100"
           >
             Core Technologies
           </motion.h3>
@@ -282,4 +282,3 @@ const SkillsSectionV2 = () => {
 };
 
 export default SkillsSectionV2;
-
