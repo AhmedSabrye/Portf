@@ -3,6 +3,14 @@
   <head>
     <meta charset="UTF-8" />
 
+    <script>
+      (function () {
+        const storedTheme = localStorage.getItem("theme");
+        const useDark = storedTheme ? storedTheme === "dark" : true;
+        if (useDark) document.documentElement.classList.add("dark");
+      })();
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link

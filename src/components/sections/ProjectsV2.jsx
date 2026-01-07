@@ -32,16 +32,16 @@ const ProjectsV2 = () => {
           className="max-w-7xl mx-auto"
         >
           <div className="text-center mb-10">
-            <span className="inline-block text-xs font-medium bg-white text-primary px-3 py-1.5 rounded-full shadow-sm mb-4">
+            <span className="inline-block text-xs font-medium bg-white dark:bg-slate-800 text-primary px-3 py-1.5 rounded-full shadow-sm mb-4">
               Curated Work
             </span>
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 otherFont mb-4">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 dark:text-slate-100 otherFont mb-4">
               Selected Projects with a&nbsp;
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-light otherFont2">
                 Product Lens
               </span>
             </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto text-sm sm:text-base">
+            <p className="text-gray-600 dark:text-slate-300 max-w-2xl mx-auto text-sm sm:text-base">
               A focused collection of builds that highlight interaction design,
               performance, and thoughtful UX decisions.
             </p>
@@ -51,7 +51,7 @@ const ProjectsV2 = () => {
             {displayedProjects.map((project) => (
               <article
                 key={project.id}
-                className="group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 hover:border-primary/30 cursor-pointer hover:-translate-y-1.5"
+                className="group bg-white dark:bg-slate-800 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 dark:border-slate-700 hover:border-primary/30 cursor-pointer hover:-translate-y-1.5"
                 onClick={() => openModal(project)}
                 role="button"
                 tabIndex={0}
@@ -76,12 +76,12 @@ const ProjectsV2 = () => {
                           Featured
                         </span>
                       )}
-                      {project.category && (
-                        <span className="text-xs font-semibold bg-white/90 text-gray-700 px-2.5 py-1 rounded-full">
-                          {project.category}
-                        </span>
-                      )}
-                    </div>
+                    {project.category && (
+                      <span className="text-xs font-semibold bg-white/90 dark:bg-slate-800/90 text-gray-700 dark:text-slate-200 px-2.5 py-1 rounded-full">
+                        {project.category}
+                      </span>
+                    )}
+                  </div>
 
                     <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     {project.link && (
@@ -89,7 +89,7 @@ const ProjectsV2 = () => {
                         href={project.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-2 bg-white text-gray-900 px-3 py-1.5 rounded-full text-xs font-semibold shadow-md hover:scale-105 transition-transform"
+                        className="flex items-center gap-2 bg-white dark:bg-slate-700 text-gray-900 dark:text-slate-100 px-3 py-1.5 rounded-full text-xs font-semibold shadow-md hover:scale-105 transition-transform"
                         onClick={(event) => event.stopPropagation()}
                       >
                         <FiExternalLink className="w-3 h-3" />
@@ -113,17 +113,17 @@ const ProjectsV2 = () => {
 
                   <div className="p-5">
                     <div className="flex items-start justify-between gap-3 mb-3">
-                      <h3 className="text-lg font-bold text-gray-900 group-hover:text-primary transition-colors otherFont">
+                      <h3 className="text-lg font-bold text-gray-900 dark:text-slate-100 group-hover:text-primary transition-colors otherFont">
                         {project.title}
                       </h3>
                       {project.year && (
-                        <span className="text-xs font-semibold text-gray-400">
+                        <span className="text-xs font-semibold text-gray-400 dark:text-slate-400">
                           {project.year}
                         </span>
                       )}
                     </div>
 
-                    <p className="text-sm text-gray-600 leading-relaxed line-clamp-2 mb-4">
+                    <p className="text-sm text-gray-600 dark:text-slate-300 leading-relaxed line-clamp-2 mb-4">
                       {project.description}
                     </p>
 
@@ -132,20 +132,20 @@ const ProjectsV2 = () => {
                         {project.tech.slice(0, 4).map((tech) => (
                           <span
                             key={tech}
-                            className="text-xs font-medium bg-gray-100 text-gray-600 px-2 py-1 rounded-full"
+                            className="text-xs font-medium bg-gray-100 dark:bg-slate-700 text-gray-600 dark:text-slate-300 px-2 py-1 rounded-full"
                           >
                             {tech}
                           </span>
                         ))}
                         {project.tech.length > 4 && (
-                          <span className="text-xs text-gray-400 font-medium">
+                          <span className="text-xs text-gray-400 dark:text-slate-400 font-medium">
                             +{project.tech.length - 4} more
                           </span>
                         )}
                       </div>
                     )}
 
-                    <div className="flex items-center justify-between text-xs font-semibold text-gray-500">
+                    <div className="flex items-center justify-between text-xs font-semibold text-gray-500 dark:text-slate-400">
                       <span>View details</span>
                       <span className="text-primary">Explore</span>
                     </div>
@@ -163,7 +163,7 @@ const ProjectsV2 = () => {
               {showAll ? "Collapse projects" : "View all projects"}
               <FiArrowRight className="w-4 h-4" />
             </button>
-            <p className="mt-3 text-xs text-gray-400">
+            <p className="mt-3 text-xs text-gray-400 dark:text-slate-400">
               {showAll
                 ? "Collapse to return to the featured selection."
                 : "Expand to see the full archive, then collapse anytime."}

@@ -2,26 +2,26 @@ import { FiExternalLink, FiGithub } from "react-icons/fi";
 
 export default function ProjectInfo({ project }) {
   return (
-    <div className="p-4 md:p-8">
+    <div className="p-4 md:p-8 text-gray-900 dark:text-slate-100">
       <div className="mb-2 md:mb-6">
         <div className="flex items-center gap-3 mb-4">
-          <span className="text-sm bg-gray-100 text-gray-600 px-3 py-1 rounded-full">
+          <span className="text-sm bg-gray-100 dark:bg-slate-700 text-gray-600 dark:text-slate-300 px-3 py-1 rounded-full">
             {project.category}
           </span>
-          <span className="text-sm bg-gray-100 text-gray-600 px-3 py-1 rounded-full">
+          <span className="text-sm bg-gray-100 dark:bg-slate-700 text-gray-600 dark:text-slate-300 px-3 py-1 rounded-full">
             {project.year}
           </span>
         </div>
-        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2 md:mb-4">
+        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-slate-100 mb-2 md:mb-4">
           {project.title}
         </h2>
       </div>
-      <p className="text-gray-600 mb-2 md:mb-6 md:text-lg leading-relaxed">
+      <p className="text-gray-600 dark:text-slate-300 mb-2 md:mb-6 md:text-lg leading-relaxed">
         {project.description}
       </p>
 
       <div className="mb-8">
-        <h3 className="text-xl font-semibold text-gray-900 mb-3">
+        <h3 className="text-xl font-semibold text-gray-900 dark:text-slate-100 mb-3">
           Technologies Used
         </h3>
         <div className="flex flex-wrap gap-2">

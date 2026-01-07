@@ -36,9 +36,9 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
           <button
             onClick={onClose}
             id="close-button"
-            className="absolute top-4 right-4 z-10 bg-white/90 backdrop-blur-sm rounded-full p-2 hover:bg-white transition-colors shadow-lg"
+            className="absolute top-4 right-4 z-10 bg-white/90 dark:bg-slate-700/90 backdrop-blur-sm rounded-full p-2 hover:bg-white dark:hover:bg-slate-600 transition-colors shadow-lg"
           >
-            <FiX className="w-6 h-6 text-gray-900" />
+            <FiX className="w-6 h-6 text-gray-900 dark:text-slate-100" />
           </button>
           <InlineCarousel
             projectImages={projectImages}

@@ -53,7 +53,7 @@ const ProjectsPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-semiWhite">
+    <div className="min-h-screen bg-semiWhite dark:bg-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.header
           className="pt-10 pb-8"
@@ -67,27 +67,27 @@ const ProjectsPage = () => {
           >
             <Link
               to="/"
-              className="inline-flex items-center gap-2 text-gray-600 hover:text-primary transition-colors"
+              className="inline-flex items-center gap-2 text-gray-600 dark:text-slate-300 hover:text-primary transition-colors"
             >
               <FiArrowLeft className="w-4 h-4" />
               <span className="text-sm font-medium">Back to Home</span>
             </Link>
-            <span className="hidden sm:inline-flex items-center gap-2 text-xs font-semibold text-primary bg-white px-3 py-1.5 rounded-full shadow-sm">
+            <span className="hidden sm:inline-flex items-center gap-2 text-xs font-semibold text-primary bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full shadow-sm">
               Curated Portfolio
             </span>
           </motion.div>
 
           <motion.div variants={itemVariants} className="text-center">
-            <span className="inline-block text-xs font-medium bg-white text-primary px-3 py-1.5 rounded-full shadow-sm mb-4">
+            <span className="inline-block text-xs font-medium bg-white dark:bg-slate-800 text-primary px-3 py-1.5 rounded-full shadow-sm mb-4">
               Curated Work
             </span>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 otherFont mb-4">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-slate-100 otherFont mb-4">
               Project Archive with a Focus on&nbsp;
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-light otherFont2">
                 Product Detail
               </span>
             </h1>
-            <p className="text-gray-600 max-w-3xl mx-auto text-sm sm:text-base">
+            <p className="text-gray-600 dark:text-slate-300 max-w-3xl mx-auto text-sm sm:text-base">
               Browse polished builds, UI explorations, and production-ready web
               experiences. Each project highlights a distinct design challenge
               and a performance-focused implementation.
@@ -96,15 +96,15 @@ const ProjectsPage = () => {
 
           <motion.div
             variants={itemVariants}
-            className="mt-8 flex flex-wrap items-center justify-center gap-3 text-xs uppercase tracking-wide text-gray-400"
+            className="mt-8 flex flex-wrap items-center justify-center gap-3 text-xs uppercase tracking-wide text-gray-400 dark:text-slate-400"
           >
-            <span className="bg-white px-4 py-2 rounded-full shadow-sm">
+            <span className="bg-white dark:bg-slate-800 px-4 py-2 rounded-full shadow-sm">
               {projects.length} Projects
             </span>
-            <span className="bg-white px-4 py-2 rounded-full shadow-sm">
+            <span className="bg-white dark:bg-slate-800 px-4 py-2 rounded-full shadow-sm">
               Product Focus
             </span>
-            <span className="bg-white px-4 py-2 rounded-full shadow-sm">
+            <span className="bg-white dark:bg-slate-800 px-4 py-2 rounded-full shadow-sm">
               UI + Motion
             </span>
           </motion.div>
@@ -124,7 +124,7 @@ const ProjectsPage = () => {
                 key={project.id}
                 variants={cardVariants}
                 whileHover="hover"
-                className="group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 hover:border-primary/30 cursor-pointer"
+                className="group bg-white dark:bg-slate-800 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 dark:border-slate-700 hover:border-primary/30 cursor-pointer"
                 onClick={() => openModal(project)}
                 role="button"
                 tabIndex={0}
@@ -150,7 +150,7 @@ const ProjectsPage = () => {
                       </span>
                     )}
                     {project.category && (
-                      <span className="text-xs font-semibold bg-white/90 text-gray-700 px-2.5 py-1 rounded-full">
+                      <span className="text-xs font-semibold bg-white/90 dark:bg-slate-800/90 text-gray-700 dark:text-slate-200 px-2.5 py-1 rounded-full">
                         {project.category}
                       </span>
                     )}
@@ -162,7 +162,7 @@ const ProjectsPage = () => {
                         href={project.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-2 bg-white text-gray-900 px-3 py-1.5 rounded-full text-xs font-semibold shadow-md"
+                        className="flex items-center gap-2 bg-white dark:bg-slate-700 text-gray-900 dark:text-slate-100 px-3 py-1.5 rounded-full text-xs font-semibold shadow-md"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         onClick={(event) => event.stopPropagation()}
@@ -190,17 +190,17 @@ const ProjectsPage = () => {
 
                 <div className="p-5">
                   <div className="flex items-start justify-between gap-3 mb-3">
-                    <h3 className="text-lg font-bold text-gray-900 group-hover:text-primary transition-colors otherFont">
+                    <h3 className="text-lg font-bold text-gray-900 dark:text-slate-100 group-hover:text-primary transition-colors otherFont">
                       {project.title}
                     </h3>
                     {project.year && (
-                      <span className="text-xs font-semibold text-gray-400">
+                      <span className="text-xs font-semibold text-gray-400 dark:text-slate-400">
                         {project.year}
                       </span>
                     )}
                   </div>
 
-                  <p className="text-sm text-gray-600 leading-relaxed line-clamp-2 mb-4">
+                  <p className="text-sm text-gray-600 dark:text-slate-300 leading-relaxed line-clamp-2 mb-4">
                     {project.description}
                   </p>
 
@@ -209,20 +209,20 @@ const ProjectsPage = () => {
                       {project.tech.slice(0, 4).map((tech) => (
                         <span
                           key={tech}
-                          className="text-xs font-medium bg-gray-100 text-gray-600 px-2 py-1 rounded-full"
+                          className="text-xs font-medium bg-gray-100 dark:bg-slate-700 text-gray-600 dark:text-slate-300 px-2 py-1 rounded-full"
                         >
                           {tech}
                         </span>
                       ))}
                       {project.tech.length > 4 && (
-                        <span className="text-xs text-gray-400 font-medium">
+                        <span className="text-xs text-gray-400 dark:text-slate-400 font-medium">
                           +{project.tech.length - 4} more
                         </span>
                       )}
                     </div>
                   )}
 
-                  <div className="flex items-center justify-between text-xs font-semibold text-gray-500">
+                  <div className="flex items-center justify-between text-xs font-semibold text-gray-500 dark:text-slate-400">
                     <span>View details</span>
                     <span className="text-primary">Explore</span>
                   </div>
@@ -238,10 +238,10 @@ const ProjectsPage = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.6 }}
         >
-          <h2 className="text-xl md:text-2xl font-bold mb-3 text-gray-900">
+          <h2 className="text-xl md:text-2xl font-bold mb-3 text-gray-900 dark:text-slate-100">
             Ready to build something together?
           </h2>
-          <p className="text-gray-500 mb-6 max-w-2xl mx-auto text-sm">
+          <p className="text-gray-500 dark:text-slate-300 mb-6 max-w-2xl mx-auto text-sm">
             Share your goals and I will translate them into a reliable, polished
             product.
           </p>
