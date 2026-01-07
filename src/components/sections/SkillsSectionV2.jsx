@@ -93,9 +93,8 @@ const SkillCard = ({
         scale: selectedSkill?.name === skill.name ? 1 : 0.8,
       }}
       transition={{ duration: 0.2 }}
-      className={`absolute select-none bottom-0 left-1/2 translate-y-1/2 transform -translate-x-1/2 z-20 ${
-        selectedSkill?.name === skill.name ? "block" : "hidden"
-      }`}
+      className={`absolute select-none bottom-0 left-1/2 translate-y-1/2 transform -translate-x-1/2 z-20 ${selectedSkill?.name === skill.name ? "block" : "hidden"
+        }`}
     >
       <div className="bg-gray-900 shadow-2xl text-white px-3 py-1.5 rounded-lg text-xs font-bold whitespace-nowrap">
         {skill.name}
@@ -113,9 +112,8 @@ const SkillCard = ({
       className="absolute -top-1 -right-1 z-10"
     >
       <div
-        className={`w-5 h-5 rounded-full flex items-center justify-center text-[10px] font-bold text-white ${
-          skill.level === "Expert" ? "bg-green-500" : "bg-blue-500"
-        } shadow-lg shadow-black/10`}
+        className={`w-5 h-5 rounded-full flex items-center justify-center text-[10px] font-bold text-white ${skill.level === "Expert" ? "bg-green-500" : "bg-blue-500"
+          } shadow-lg shadow-black/10`}
       >
         {skill.level === "Expert" ? "★" : "•"}
       </div>
@@ -199,7 +197,7 @@ const SkillsSectionV2 = () => {
   return (
     <section
       id="skills"
-      className="min-h-screen pt-24 pb-20 px-4 sm:px-6 flex items-center justify-center bg-gray-50/20"
+      className="min-h-screen pt-30 pb-20 px-4 sm:px-6 flex items-center justify-center bg-gray-50/20"
     >
       <div className="max-w-[1400px] w-full mx-auto">
         <div className="text-center mb-16 md:mb-20">

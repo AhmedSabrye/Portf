@@ -11,7 +11,7 @@ const BioSectionV2 = () => {
   return (
     <section
       id="bio"
-      className="py-10 px-4 text-tertiary flex items-center justify-center"
+      className="pb-10 pt-30 px-4 text-tertiary flex items-center justify-center"
     >
       <motion.div
         initial={{ opacity: 0, x: -50 }}
@@ -50,11 +50,10 @@ const BioSectionV2 = () => {
               <button
                 key={section.id}
                 onClick={() => setActiveTab(section.id)}
-                className={`flex items-center gap-2 px-4 py-2 rounded-md font-medium transition-all duration-200 ${
-                  activeTab === section.id
+                className={`flex items-center gap-2 px-4 py-2 rounded-md font-medium transition-all duration-200 ${activeTab === section.id
                     ? "bg-primary text-white shadow-sm"
                     : "text-gray-700 hover:text-tertiary hover:bg-gray-50"
-                }`}
+                  }`}
               >
                 <span
                   className={

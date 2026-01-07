@@ -26,7 +26,7 @@ const ProjectsV2 = () => {
     <>
       <section
         id="projects"
-        className="flex items-center justify-center px-4 pt-10 mb-70"
+        className="flex items-center justify-center px-4 pt-30 mb-70"
       >
         <motion.div
           initial={{ opacity: 0, y: 50 }}
