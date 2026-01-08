@@ -6,24 +6,23 @@ const experienceItems = [
     role: "Front-End Developer",
     company: "Bevatel",
     period: "September 2025 – Present",
-    bullets: [
-      "Worked closely with designers, backend engineers, and product managers to deliver features end-to-end.",
-      "Refactored existing code to enhance readability, performance, and maintainability.",
-      "Translated Figma designs into pixel-perfect, responsive UI components, ensuring visual consistency across browsers and devices.",
-      "Conducted an SVG icon audit using Vite and Storybook, identifying duplicate icons, reducing redundancy, and establishing guidelines to prevent future icon duplication.",
-      "Managed branches and created focused pull requests using Git to ensure isolated, review-ready changes.",
+    summary:
+      "Worked closely with backend, product design, and the product team to ship seamless user experiences from spec to release.",
+    tags: [
+      "UI systems",
+      "Performance",
+      "Design-to-code",
+      "Collaboration",
+      "Code quality",
     ],
   },
   {
     role: "Front-End Mentor",
     company: "Route Academy",
     period: "September 2024 – September 2025",
-    bullets: [
-      "Mentored 8+ groups in React and JavaScript, improving student project completion rates.",
-      "Debugged and resolved issues in students' code, strengthening problem-solving and technical communication skills.",
-      "Refined teaching approach, resulting in a 30% reduction in the React learning curve.",
-      "Authored materials and led 10+ workshops on advanced concepts such as stacking context and Redux.",
-    ],
+    summary:
+      "Guided teams through React fundamentals and advanced topics while improving outcomes and learning velocity.",
+    tags: ["Mentorship", "Workshops", "Debugging", "React", "Communication"],
   },
 ];
 
@@ -50,42 +49,59 @@ const ExperienceSection = () => {
           </p>
         </div>
 
-        <div className="relative border-l border-gray-200 dark:border-slate-700 ml-3 sm:ml-6">
-          {experienceItems.map((item, index) => (
-            <motion.div
-              key={item.role}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ delay: index * 0.1, duration: 0.5 }}
-              className="relative pl-10 sm:pl-12 pb-12"
-            >
-              <div className="absolute left-0 top-1.5 -translate-x-1/2 w-4 h-4 rounded-full bg-primary shadow-[0_0_0_6px_rgba(255,95,46,0.2)]" />
-              <div className="bg-white dark:bg-slate-800 border border-gray-100 dark:border-slate-700 rounded-2xl p-6 shadow-lg">
-                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
-                  <div>
-                    <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-slate-100">
-                      {item.role}
-                    </h3>
-                    <p className="text-sm text-gray-500 dark:text-slate-300">
-                      {item.company}
-                    </p>
+        <div className="relative">
+          <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-gray-200 dark:bg-slate-700" />
+          <div className="space-y-10 md:space-y-14">
+            {experienceItems.map((item, index) => {
+              const isLeft = index % 2 === 0;
+              return (
+                <motion.div
+                  key={item.role}
+                  initial={{ opacity: 0, y: 24 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ delay: index * 0.1, duration: 0.5 }}
+                  className="relative md:grid md:grid-cols-[1fr_auto_1fr]"
+                >
+                  <div
+                    className={`absolute left-0 md:left-1/2 top-6 -translate-x-1/2 w-4 h-4 rounded-full bg-primary shadow-[0_0_0_6px_rgba(255,95,46,0.2)]`}
+                  />
+                  <div
+                    className={`ml-6 md:ml-0 md:row-start-1 ${isLeft ? "md:col-start-1 md:pr-8 md:justify-self-end" : "md:col-start-3 md:pl-8"}`}
+                  >
+                    <div className="bg-white dark:bg-slate-800 border border-gray-100 dark:border-slate-700 rounded-2xl p-6 shadow-lg">
+                      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
+                        <div>
+                          <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-slate-100">
+                            {item.role}
+                          </h3>
+                          <p className="text-sm text-gray-500 dark:text-slate-300">
+                            {item.company}
+                          </p>
+                        </div>
+                        <span className="text-xs font-semibold text-primary bg-primary/10 px-3 py-1 rounded-full">
+                          {item.period}
+                        </span>
+                      </div>
+                      <p className="text-sm sm:text-base text-gray-600 dark:text-slate-300 leading-relaxed">
+                        {item.summary}
+                      </p>
+                      <div className="mt-4 flex flex-wrap gap-2">
+                        {item.tags.map((tag) => (
+                          <span
+                            key={tag}
+                            className="text-xs font-medium bg-gray-100 dark:bg-slate-700 text-gray-600 dark:text-slate-200 px-2.5 py-1 rounded-full"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
                   </div>
-                  <span className="text-xs font-semibold text-primary bg-primary/10 px-3 py-1 rounded-full">
-                    {item.period}
-                  </span>
-                </div>
-                <ul className="space-y-3 text-sm text-gray-600 dark:text-slate-300 leading-relaxed">
-                  {item.bullets.map((bullet) => (
-                    <li key={bullet} className="flex gap-3">
-                      <span className="mt-2 h-2 w-2 rounded-full bg-primary flex-shrink-0" />
-                      <span>{bullet}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </motion.div>
-          ))}
+                </motion.div>
+              );
+            })}
+          </div>
         </div>
       </motion.div>
     </section>
