@@ -1,6 +1,7 @@
 import avatar from "@/assets/Ahmed Sabry squooshed.jpg";
 import { socialLinks } from "@/utils/constants";
 import { motion } from "framer-motion";
+import RotatingText from "../rotating-text/RotatingText";
 
 const PortfolioHeroV2 = () => {
   return (
@@ -28,19 +29,40 @@ const PortfolioHeroV2 = () => {
           </span>
           I&apos;m Ahmed Sabry
         </span>
-        <h1 className="mt-8 text-2xl leading-tight sm:text-5xl md:text-6xl font-extrabold text-gray-900 dark:text-slate-100 otherFont">
-          I build&nbsp;
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-light otherFont2">
-            Web Apps
+        <h1 className="mt-8 text-2xl leading-tight sm:text-5xl md:text-6xl font-extrabold text-gray-900 dark:text-slate-100 handFont">
+          I build frontend that{" "}
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-light inline-block sm:whitespace-nowrap ">
+            <RotatingText
+              texts={[
+                "feels fast, polished, and reliable.",
+                "is accessible, responsive, and production-ready.",
+                "scales cleanly and stays fast over time.",
+              ]}
+              rotationInterval={4000}
+              splitBy="words"
+            />
           </span>
-          &nbsp;that&nbsp;
-          <br className="hidden sm:block" />
-          actually work!
         </h1>
         <p className="mt-6 text-gray-500 dark:text-slate-300 max-w-2xl text-base sm:text-lg">
           Crafting beautiful, responsive designs with clean code and a passion
           for user experience.
         </p>
+        <div className="mt-8 flex flex-wrap items-center gap-4">
+          <a
+            href="#projects"
+            className="px-6 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-500 bg-primary text-white"
+          >
+            Projects
+          </a>
+          <a
+            href="https://drive.google.com/file/d/1la7Q1R9ogRweawib7L-CV2N1m94-SMKl/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-6 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-500 ring-1 ring-gray-200 dark:ring-slate-600 text-gray-700 dark:text-slate-200 hover:ring-primary hover:text-primary"
+          >
+            Resume
+          </a>
+        </div>
         <div className="social flex items-center gap-4 mt-12">
           {socialLinks.map((link) => (
             <motion.a

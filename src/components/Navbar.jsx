@@ -39,6 +39,7 @@ export default function Navbar() {
   const navLinks = useMemo(
     () => [
       { id: "home", label: "Home" },
+      { id: "experience", label: "Experience" },
       { id: "projects", label: "Projects" },
       { id: "bio", label: "Bio" },
       { id: "skills", label: "Skills" },
