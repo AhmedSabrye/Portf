@@ -14,7 +14,7 @@ const PortfolioHeroV2 = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.33 }}
         transition={{ duration: 0.8 }}
-        className="relative z-10 flex flex-col items-center text-center px-6 lg:px-10 pb-16"
+        className="relative z-10 flex flex-col items-center text-center px-6 lg:px-10"
       >
         <div className="flex flex-col items-center text-center">
           <div className="w-28 h-28 sm:w-32 sm:h-32 md:w-36 md:h-36 rounded-full overflow-hidden shadow-lg relative ring-4 ring-primary/50 ring-offset-4 ring-offset-white dark:ring-offset-slate-800">
