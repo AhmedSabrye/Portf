@@ -41,6 +41,22 @@ const PortfolioHeroV2 = () => {
           Crafting beautiful, responsive designs with clean code and a passion
           for user experience.
         </p>
+        <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
+          <a
+            href="#projects"
+            className="inline-flex items-center justify-center bg-primary text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all"
+          >
+            Projects
+          </a>
+          <a
+            href="https://drive.google.com/file/d/1la7Q1R9ogRweawib7L-CV2N1m94-SMKl/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center border border-gray-200 dark:border-slate-600 text-gray-700 dark:text-slate-200 px-6 py-3 rounded-full font-semibold hover:border-primary hover:text-primary transition-all"
+          >
+            Download Resume
+          </a>
+        </div>
         <div className="social flex items-center gap-4 mt-12">
           {socialLinks.map((link) => (
             <motion.a
