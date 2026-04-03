@@ -11,10 +11,9 @@ export const bioInfo = [
     img: avatarSuite,
     icon: <FaBriefcase className="w-5 h-5" />,
     items: [
-      "Frontend Developer at Bevatel",
-      "specialized in React, Next.js and Vue.js",
-      "Creating intuitive and high-performance web applications",
-      "Academic Mentor at Route Academy Helping students master frontend development",
+      "Frontend Engineer at Bevatel",
+      "Specialized in React, Next.js, and Vue.js",
+      "Focused on performance optimization, better user experience, and well-structured, maintainable code",
     ],
   },
   {
@@ -23,10 +22,10 @@ export const bioInfo = [
     img: avatarReact,
     icon: <FaBrain className="w-5 h-5" />,
     items: [
-      "Passionate about diving deep into core concepts",
-      "Bridging the gap between surface-level knowledge and mastery",
-      "Committed to collaborative learning",
-      "Embracing every day as an opportunity to learn, share, and evolve collaboratively",
+      "Hands-on first — I believe real learning comes from building, not watching",
+      "Research, design, then code — I plan before I build",
+      "Strong CSS and JavaScript foundations — framework-agnostic problem solving",
+      "Writing code that other engineers can pick up and work with easily",
     ],
   },
   {
@@ -37,8 +36,8 @@ export const bioInfo = [
     items: [
       "Call me Sabry",
       "Ran 10k straight - if I can survive that, I can debug anything 🏃‍♂️",
-      "Typing speed: 100 WPM peak, 80 WPM average",
-      "Always learning something new",
+      "Deep-diving into Vue.js after solid experience with React",
+      "I love building — Attendo, LaQta, and more to come",
     ],
   },
 ];

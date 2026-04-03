@@ -19,14 +19,14 @@ export default function ButtonsAndIndicators({
       <button
         id="prev-button"
         onClick={scrollPrev}
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/90 backdrop-blur-sm rounded-full p-2 hover:bg-white transition-colors shadow-lg z-10"
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/90 backdrop-blur-sm rounded-full p-2 hover:bg-white transition-colors shadow-lg z-10 cursor-pointer"
       >
         <FiChevronLeft className="w-6 h-6 text-gray-900" />
       </button>
       <button
         id="next-button"
         onClick={scrollNext}
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/90 backdrop-blur-sm rounded-full p-2 hover:bg-white transition-colors shadow-lg z-10"
+        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/90 backdrop-blur-sm rounded-full p-2 hover:bg-white transition-colors shadow-lg z-10 cursor-pointer"
       >
         <FiChevronRight className="w-6 h-6 text-gray-900" />
       </button>

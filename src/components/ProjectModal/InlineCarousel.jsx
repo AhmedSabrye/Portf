@@ -37,17 +37,19 @@ export default function InlineCarousel({
     projectImages,
     onIndexChange
   );
+
   return (
     <motion.div
       initial={{ scale: 0.8, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
       exit={{ scale: 0.8, opacity: 0 }}
-      className="bg-white dark:bg-slate-800 rounded-2xl max-w-7xl w-full max-h-[90vh] overflow-hidden shadow-2xl h-full"
+      className="bg-white dark:bg-slate-800 rounded-2xl max-w-7xl w-full max-h-[90vh] overflow-hidden shadow-2xl flex flex-col lg:flex-row lg:h-[80vh]"
       onClick={(e) => e.stopPropagation()}
     >
-      <div className="h-72 md:h-96 lg:h-[500px] bg-gray-100 dark:bg-slate-700 relative overflow-hidden">
-        <div className="embla" ref={emblaRef}>
-          <div className="embla__container flex">
+      {/* Left Panel — Carousel (60% on desktop, full width on mobile) */}
+      <div className="relative w-full lg:w-[60%] h-72 md:h-96 lg:h-full bg-gray-100 dark:bg-slate-700 overflow-hidden shrink-0">
+        <div className="embla h-full" ref={emblaRef}>
+          <div className="embla__container flex h-full">
             {projectImages.map((media, index) => (
               <div
                 key={index}
@@ -76,6 +78,7 @@ export default function InlineCarousel({
           </div>
         </div>
 
+        {/* Navigation + dots */}
         {shouldShowDots && (
           <ButtonsAndIndicators
             scrollPrev={scrollPrev}
@@ -86,16 +89,27 @@ export default function InlineCarousel({
           />
         )}
 
+        {/* Image counter badge */}
+        {projectImages.length > 1 && (
+          <span className="absolute top-4 right-14 bg-black/50 text-white text-xs px-2.5 py-1 rounded-full z-10 font-medium tabular-nums">
+            {currentImageIndex + 1} / {projectImages.length}
+          </span>
+        )}
+
+        {/* Fullscreen button */}
         <button
           id="fullscreen-button"
           onClick={toggleFullscreen}
-          className="absolute bottom-4 right-4 bg-white/90 dark:bg-slate-700/90 backdrop-blur-sm rounded-full p-2 hover:bg-white dark:hover:bg-slate-600 transition-colors shadow-lg z-10"
+          className="absolute bottom-4 right-4 bg-white/90 dark:bg-slate-700/90 backdrop-blur-sm rounded-full p-2 hover:bg-white dark:hover:bg-slate-600 transition-colors shadow-lg z-10 cursor-pointer"
         >
           <FiMaximize className="w-5 h-5 text-gray-900 dark:text-slate-100" />
         </button>
       </div>
 
-      <ProjectInfo project={project} />
+      {/* Right Panel — Project Info (40% on desktop, full width on mobile) */}
+      <div className="w-full lg:w-[40%] overflow-y-auto max-h-[40vh] lg:max-h-full">
+        <ProjectInfo project={project} />
+      </div>
     </motion.div>
   );
 }

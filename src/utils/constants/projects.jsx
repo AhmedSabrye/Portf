@@ -41,6 +41,27 @@ import laqta3 from "@/assets/laqta/3.jpg";
 
 export const projects = [
   {
+    id: 9,
+    title: "Vue Query Demo – Pinia vs TanStack Query",
+    shortTitle: "Vue Query Demo",
+    description:
+      "An interactive educational demo comparing manual server-state management (Pinia) with declarative server-state (TanStack Query) in Vue 3. Users explore the same product and order flows side by side — seeing how each approach handles caching, loading states, retries, optimistic updates, and intentional API failures in real time.",
+    tech: [
+      "Vue 3",
+      "TanStack Query",
+      "Pinia",
+      "Vite",
+      "Cloudflare Workers",
+      "Cloudflare D1",
+    ],
+    image: img0, // TODO: Replace with Vue Query Demo screenshot
+    images: [img0], // TODO: Replace with Vue Query Demo screenshots
+    link: "https://vue-query-demo.ahmedsabry.pro",
+    category: "Fullstack",
+    year: "2026",
+    github: "https://github.com/AhmedSabrye/vue-query-demo",
+  },
+  {
     id: 8,
     title: "LaQta",
     shortTitle: "LaQta",

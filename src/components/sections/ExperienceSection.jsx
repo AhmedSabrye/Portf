@@ -3,17 +3,18 @@ import { motion } from "framer-motion";
 
 const experienceItems = [
   {
-    role: "Front-End Developer",
+    role: "Front-End Engineer",
     company: "Bevatel",
     period: "September 2025 – Present",
+    current: true,
     summary:
       "Worked closely with backend, product design, and the product team to ship seamless user experiences from spec to release.",
-    tags: [
-      "UI systems",
-      "Performance",
-      "Design-to-code",
-      "Collaboration",
-      "Code quality",
+    techStack: ["Vue", "Vue Query", "Pinia", "Tailwind", "TypeScript"],
+    focusAreas: [
+      "Async State Management",
+      "Component Architecture",
+      "DX Tooling",
+      "Feature Ownership",
     ],
   },
   {
@@ -22,7 +23,8 @@ const experienceItems = [
     period: "September 2024 – September 2025",
     summary:
       "Guided teams through React fundamentals and advanced topics while improving outcomes and learning velocity.",
-    tags: ["Mentorship", "Workshops", "Debugging", "React", "Communication"],
+    techStack: ["React", "Next.js", "React Query", "Zustand", "Redux", "Tailwind"],
+    tags: ["Mentorship", "Workshops", "Debugging", "Communication"],
   },
 ];
 
@@ -69,7 +71,13 @@ const ExperienceSection = () => {
                   <div
                     className={`ml-6 md:ml-0 md:row-start-1 ${isLeft ? "md:col-start-1 md:pr-8 md:justify-self-end" : "md:col-start-3 md:pl-8"}`}
                   >
-                    <div className="bg-white dark:bg-slate-800 border border-gray-100 dark:border-slate-700 rounded-2xl p-6 shadow-lg">
+                    <div
+                      className={`rounded-2xl p-6 shadow-lg ${
+                        item.current
+                          ? "bg-white dark:bg-slate-800 border-l-4 border-primary border-t border-r border-b border-t-gray-100 border-r-gray-100 border-b-gray-100 dark:border-t-slate-700 dark:border-r-slate-700 dark:border-b-slate-700"
+                          : "bg-white dark:bg-slate-800 border border-gray-100 dark:border-slate-700"
+                      }`}
+                    >
                       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
                         <div>
                           <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-slate-100">
@@ -86,16 +94,72 @@ const ExperienceSection = () => {
                       <p className="text-sm sm:text-base text-gray-600 dark:text-slate-300 leading-relaxed">
                         {item.summary}
                       </p>
-                      <div className="mt-4 flex flex-wrap gap-2">
-                        {item.tags.map((tag) => (
-                          <span
-                            key={tag}
-                            className="text-xs font-medium bg-gray-100 dark:bg-slate-700 text-gray-600 dark:text-slate-200 px-2.5 py-1 rounded-full"
-                          >
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
+
+                      {/* Tech stack + focus area tags (Bevatel) */}
+                      {item.techStack && item.focusAreas && (
+                        <div className="mt-4 space-y-3">
+                          <div className="flex flex-wrap gap-2">
+                            {item.techStack.map((tech) => (
+                              <span
+                                key={tech}
+                                className="text-xs font-semibold bg-primary/10 text-primary px-2.5 py-1 rounded-full"
+                              >
+                                {tech}
+                              </span>
+                            ))}
+                          </div>
+                          <div className="flex flex-wrap gap-2">
+                            {item.focusAreas.map((area) => (
+                              <span
+                                key={area}
+                                className="text-xs font-medium bg-gray-100 dark:bg-slate-700 text-gray-600 dark:text-slate-200 px-2.5 py-1 rounded-full"
+                              >
+                                {area}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+
+                      {/* Tags without tech stack (fallback) */}
+                      {item.tags && !item.techStack && (
+                        <div className="mt-4 flex flex-wrap gap-2">
+                          {item.tags.map((tag) => (
+                            <span
+                              key={tag}
+                              className="text-xs font-medium bg-gray-100 dark:bg-slate-700 text-gray-600 dark:text-slate-200 px-2.5 py-1 rounded-full"
+                            >
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
+                      )}
+
+                      {/* Tech stack + generic tags (Route Academy) */}
+                      {item.tags && item.techStack && !item.focusAreas && (
+                        <div className="mt-4 space-y-3">
+                          <div className="flex flex-wrap gap-2">
+                            {item.techStack.map((tech) => (
+                              <span
+                                key={tech}
+                                className="text-xs font-semibold bg-primary/10 text-primary px-2.5 py-1 rounded-full"
+                              >
+                                {tech}
+                              </span>
+                            ))}
+                          </div>
+                          <div className="flex flex-wrap gap-2">
+                            {item.tags.map((tag) => (
+                              <span
+                                key={tag}
+                                className="text-xs font-medium bg-gray-100 dark:bg-slate-700 text-gray-600 dark:text-slate-200 px-2.5 py-1 rounded-full"
+                              >
+                                {tag}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+                      )}
                     </div>
                   </div>
                 </motion.div>

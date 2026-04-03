@@ -15,7 +15,7 @@ export const socialLinks = [
   },
   {
     name: "Email Me",
-    url: "mailto:ahmdsabry.fr@gmail.com",
+    url: "mailto:ahmedsabry.fr@gmail.com",
     icon: <MdOutlineAlternateEmail />,
   },
 ];

@@ -18,7 +18,7 @@ const BioSectionV2 = () => {
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true, amount: 0.33 }}
         transition={{ duration: 0.8 }}
-        className="max-w-4xl md:min-w-3xl mx-auto"
+        className="max-w-3xl w-full mx-auto"
       >
         <div className="text-center mb-12">
           <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden mx-auto mb-6 shadow-sm">
@@ -39,7 +39,7 @@ const BioSectionV2 = () => {
             About <span className="text-primary">Me</span>
           </h2>
           <p className="text-gray-700 dark:text-slate-300 text-lg max-w-2xl mx-auto">
-            Frontend developer and mentor passionate about React, Next.js.
+            Frontend Engineer specializing in React, Next.js, and Vue.js — obsessed with clean architecture and smooth user experiences.
           </p>
         </div>
 
@@ -50,9 +50,9 @@ const BioSectionV2 = () => {
               <button
                 key={section.id}
                 onClick={() => setActiveTab(section.id)}
-                className={`flex items-center gap-2 px-4 py-2 rounded-md font-medium transition-all duration-200 ${activeTab === section.id
-                    ? "bg-primary text-white shadow-sm"
-                    : "text-gray-700 dark:text-slate-300 hover:text-tertiary hover:bg-gray-50 dark:hover:bg-slate-800"
+                className={`flex items-center gap-2 px-4 py-2 rounded-md font-medium transition-all duration-200 cursor-pointer ${activeTab === section.id
+                  ? "bg-primary text-white shadow-sm"
+                  : "text-gray-700 dark:text-slate-300 hover:text-tertiary hover:bg-gray-50 dark:hover:bg-slate-800"
                   }`}
               >
                 <span
@@ -69,11 +69,11 @@ const BioSectionV2 = () => {
                   }
                   variants={{
                     hidden: { opacity: 0, width: 0 },
-                    selected: { opacity: 1, width: 100 },
+                    selected: { opacity: 1, width: "auto" },
                     notSelected: { opacity: 0, width: 0 },
                   }}
                   transition={{ duration: 0.5, ease: "easeInOut" }}
-                  className="overflow-hidden"
+                  className="overflow-hidden whitespace-nowrap"
                 >
                   {section.category}
                 </motion.span>
@@ -82,7 +82,7 @@ const BioSectionV2 = () => {
           </div>
         </div>
 
-        <div className="bg-white dark:bg-slate-800 rounded-lg p-8 shadow-sm min-h-96 sm:min-h-64">
+        <div className="bg-white dark:bg-slate-800 rounded-lg p-8 shadow-sm min-h-96 sm:min-h-64 w-full">
           <AnimatePresence mode="wait">
             <motion.div
               key={activeSection.id}
