@@ -17,6 +17,12 @@ export const commonSkills = [
     color: "#265c97",
   },
   {
+    name: "Tailwind CSS",
+    image: tailwindcss,
+    level: "Expert",
+    color: "#06B6D4",
+  },
+  {
     name: "JavaScript",
     image:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
@@ -29,12 +35,6 @@ export const commonSkills = [
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
     level: "Expert",
     color: "#3178C6",
-  },
-  {
-    name: "Tailwind CSS",
-    image: tailwindcss,
-    level: "Expert",
-    color: "#06B6D4",
   },
   {
     name: "Vite",
@@ -135,18 +135,18 @@ export const vueSkills = [
     color: "#4FC08D",
   },
   {
-    name: "Vuetify",
-    image:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuetify/vuetify-original.svg",
-    level: "Advanced",
-    color: "#000000",
-  },
-  {
     name: "Vue Query",
     image:
       "https://raw.githubusercontent.com/TanStack/query/main/media/emblem-light.svg",
     level: "Advanced",
     color: "#FF4154",
+  },
+  {
+    name: "Vuetify",
+    image:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuetify/vuetify-original.svg",
+    level: "Advanced",
+    color: "#000000",
   },
 ];
 

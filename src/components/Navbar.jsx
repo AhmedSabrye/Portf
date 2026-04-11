@@ -16,12 +16,20 @@ export default function Navbar() {
   }, []);
 
   const toggleTheme = () => {
-    setIsDark((prev) => {
-      const next = !prev;
+    const next = !isDark;
+    localStorage.setItem("theme", next ? "dark" : "light");
+
+    const applyTheme = () => {
       document.documentElement.classList.toggle("dark", next);
-      localStorage.setItem("theme", next ? "dark" : "light");
-      return next;
-    });
+      setIsDark(next);
+    };
+
+    if (!document.startViewTransition) {
+      applyTheme();
+      return;
+    }
+
+    document.startViewTransition(applyTheme);
   };
 
   const scrollToSection = (sectionId) => {
