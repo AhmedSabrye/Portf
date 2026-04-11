@@ -62,7 +62,7 @@ const PortfolioHeroV2 = () => {
               Projects
             </a>
             <a
-              href="https://drive.google.com/file/d/1la7Q1R9ogRweawib7L-CV2N1m94-SMKl/view?usp=sharing"
+              href="https://drive.google.com/file/d/1kXNxR8wQ-EstkTErvua1CJ0d7w7jSTPU/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-500 ring-1 ring-gray-200 dark:ring-slate-600 text-gray-700 dark:text-slate-200 hover:ring-primary hover:text-primary"
