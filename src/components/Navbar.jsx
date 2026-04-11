@@ -140,7 +140,7 @@ export default function Navbar() {
           <button
             type="button"
             onClick={toggleTheme}
-            className="w-10 h-10 rounded-full border border-gray-200 dark:border-slate-600 flex items-center justify-center text-gray-700 dark:text-slate-200 hover:text-primary transition-colors"
+            className="w-10 h-10 rounded-full border border-gray-200 dark:border-slate-600 flex items-center justify-center text-gray-700 dark:text-slate-200 hover:text-primary transition-colors cursor-pointer"
             aria-label="Toggle dark mode"
           >
             {isDark ? <FiSun className="w-5 h-5" /> : <FiMoon className="w-5 h-5" />}
@@ -220,7 +220,7 @@ export default function Navbar() {
                 <button
                   type="button"
                   onClick={toggleTheme}
-                  className="w-full mb-4 flex items-center justify-center gap-2 rounded-2xl border border-gray-200 dark:border-slate-600 py-3 text-gray-700 dark:text-slate-200"
+                  className="w-full mb-4 flex items-center justify-center gap-2 rounded-2xl border border-gray-200 dark:border-slate-600 py-3 text-gray-700 dark:text-slate-200 cursor-pointer"
                 >
                   {isDark ? "Switch to Light" : "Switch to Dark"}
                 </button>
