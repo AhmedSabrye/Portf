@@ -97,14 +97,14 @@ body {
 }
 
 ::view-transition-new(root) {
-  mask: url('https://media.tenor.com/cyORI7kwShQAAAAi/shigure-ui-dance.gif') center / 0 no-repeat;
-  animation: gif-scale 3s;
+  mask: url('/1uIf.gif') center / 0 no-repeat;
+  animation: gif-scale 2s;
   animation-fill-mode: both;
 }
 
 ::view-transition-old(root),
 .dark::view-transition-old(root) {
-  animation: gif-scale 3s;
+  animation: gif-scale 2s;
   animation-fill-mode: both;
 }
 
@@ -113,10 +113,10 @@ body {
     mask-size: 0;
   }
   10% {
-    mask-size: 50vmax;
+    mask-size: 17.5vmax;
   }
   90% {
-    mask-size: 50vmax;
+    mask-size: 17.5vmax;
   }
   100% {
     mask-size: 2000vmax;
