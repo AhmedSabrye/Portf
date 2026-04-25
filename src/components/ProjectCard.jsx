@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { FiExternalLink, FiGithub } from "react-icons/fi";
 
 // Category color mapping
@@ -85,12 +86,20 @@ const ProjectCard = ({ project, onClick, motionProps = {} }) => {
 
             {/* Image Area — taller (h-52) */}
             <div className="relative h-52 overflow-hidden bg-gray-50 dark:bg-slate-700/50">
-                <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    loading="lazy"
-                />
+                <motion.div
+                    layoutId={`project-img-${project.id}`}
+                    className="w-full h-full object-cover"
+                    transition={{ type: "spring", stiffness: 280, damping: 28 }}
+                >
+                    <motion.img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                        whileHover={{ scale: 1.05 }}
+                        transition={{ duration: 0.5 }}
+                    />
+                </motion.div>
                 {/* Subtle gradient overlay on hover */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 

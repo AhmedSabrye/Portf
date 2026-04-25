@@ -117,7 +117,6 @@ const ProjectsPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
             {projects.map((project) => (
               <motion.div
-                layoutId={`project-${project.id}`}
                 key={project.id}
                 variants={cardVariants}
               >
@@ -155,7 +154,6 @@ const ProjectsPage = () => {
       </div>
 
       <ProjectModal
-        key={selectedProject?.id}
         project={selectedProject}
         isOpen={isModalOpen}
         onClose={closeModal}

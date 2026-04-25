@@ -66,6 +66,18 @@ export default function InlineCarousel({
                     className="w-full h-full object-contain"
                     title={`${project.title} video ${index + 1}`}
                   />
+                ) : index === 0 ? (
+                  <motion.div
+                    layoutId={`project-img-${project.id}`}
+                    className="w-full h-full"
+                    transition={{ type: "spring", stiffness: 280, damping: 28 }}
+                  >
+                    <img
+                      src={media}
+                      alt={`${project.title} screenshot ${index + 1}`}
+                      className="w-full h-full object-contain"
+                    />
+                  </motion.div>
                 ) : (
                   <img
                     src={media}

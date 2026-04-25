@@ -9,6 +9,11 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
   const [isFullscreen, setIsFullscreen] = useState(false);
 
   useEffect(() => {
+    setCurrentImageIndex(0);
+    setIsFullscreen(false);
+  }, [project?.id]);
+
+  useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
       const handleKeyDown = (e) => {

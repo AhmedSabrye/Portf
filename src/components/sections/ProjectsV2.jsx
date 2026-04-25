@@ -77,7 +77,6 @@ const ProjectsV2 = () => {
       </section>
 
       <ProjectModal
-        key={selectedProject?.id}
         project={selectedProject}
         isOpen={isModalOpen}
         onClose={closeModal}

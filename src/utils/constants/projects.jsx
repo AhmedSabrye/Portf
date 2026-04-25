@@ -80,7 +80,7 @@ export const projects = [
     shortTitle: "Attendo",
     description: "Attendance Automation and Tracking System",
     tech: ["React", "Zustand", "Tailwindcss", "Framer Motion"],
-    image: img0,
+    image: attendoHomePage,
     images: [
       attendoHomePage,
       img0,
@@ -107,6 +107,7 @@ export const projects = [
     tech: ["React", "Zustand", "Tailwindcss", "Framer Motion"],
     image: img1,
     images: [
+      img1,
       freshbagHome,
       freshbagAllOrders,
       freshbagCart,
