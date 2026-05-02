@@ -21,6 +21,12 @@ const BioSectionV2 = () => {
         className="max-w-3xl w-full mx-auto"
       >
         <div className="text-center mb-12">
+          {/* Preload all tab images */}
+          <div className="hidden" aria-hidden="true">
+            {bioInfo.map((section) => (
+              <img key={section.id} src={section.img} alt="" />
+            ))}
+          </div>
           <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden mx-auto mb-6 shadow-sm">
             <AnimatePresence mode="wait">
               <motion.img
