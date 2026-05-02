@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
+import { CV_LINK } from "@/constants";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
 import { FiMoon, FiSun } from "react-icons/fi";
 import { motion, AnimatePresence } from "framer-motion";
@@ -146,7 +147,7 @@ export default function Navbar() {
             {isDark ? <FiSun className="w-5 h-5" /> : <FiMoon className="w-5 h-5" />}
           </button>
           <a
-            href="https://drive.google.com/file/d/1MB7awMp8XzFaHkO-Xa6IN759gCJJGULN/view?usp=drive_link"
+            href={CV_LINK}
             target="_blank"
             rel="noopener noreferrer"
             className="hidden sm:inline-block text-xs sm:text-sm font-semibold bg-gray-900 text-white px-5 py-2.5 rounded-full shadow-md hover:bg-gray-800 hover:shadow-lg transition-all"
@@ -225,7 +226,7 @@ export default function Navbar() {
                   {isDark ? "Switch to Light" : "Switch to Dark"}
                 </button>
                 <a
-                  href="https://drive.google.com/file/d/1MB7awMp8XzFaHkO-Xa6IN759gCJJGULN/view?usp=drive_link"
+                  href={CV_LINK}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block text-center bg-gray-900 text-white py-4 rounded-2xl font-semibold shadow-lg"

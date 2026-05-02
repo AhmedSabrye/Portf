@@ -1,4 +1,5 @@
 import avatar from "@/assets/Ahmed Sabry squooshed.jpg";
+import { CV_LINK } from "@/constants";
 import { socialLinks } from "@/utils/constants";
 import { motion } from "framer-motion";
 import RotatingText from "../rotating-text/RotatingText";
@@ -62,7 +63,7 @@ const PortfolioHeroV2 = () => {
               Projects
             </a>
             <a
-              href="https://drive.google.com/file/d/1MB7awMp8XzFaHkO-Xa6IN759gCJJGULN/view?usp=drive_link"
+              href={CV_LINK}
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-500 ring-1 ring-gray-200 dark:ring-slate-600 text-gray-700 dark:text-slate-200 hover:ring-primary hover:text-primary"
@@ -87,7 +88,7 @@ const PortfolioHeroV2 = () => {
           </div>
         </div>
         {/* <a
-          href="https://drive.google.com/file/d/1MB7awMp8XzFaHkO-Xa6IN759gCJJGULN/view?usp=drive_link"
+          href={CV_LINK}
           target="_blank"
           className="inline-block bg-gray-900 text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transition"
         >
